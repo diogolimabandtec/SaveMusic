@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Tela_cadastro.css">
+    <script language="javascript" SRC="./JavaScript/Tela_cadastro.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tela Cadastro</title>
+</head>
+<body>
+
+        <div class="barraTopo">
+            <img src="./Imagens/logo.jpg" alt="teste">
+            <b>Save Music</b>
+            <img src="./Imagens/logo.jpg" alt="teste" style="margin-left:8px; margin-right: 8px" >
+            <button onclick="window.location.href='Tela_contribuintes.html';" style="min-width: 213px;">Contribuintes</button>
+            <button onclick="window.location.href='Tela_grafico.html';">Gráficos</button>
+            <button onclick="window.location.href='Tela_login.html';" style="min-width: 143px;">Perfil</button>
+        </div>
+
+        <div class="direita">
+                    <input id="id_nome" type="text" placeholder="Nome">
+                    <input id="id_email" type="email" placeholder="Email">
+                    <input id="id_senha" type="password" placeholder="Senha">
+                    <input id="id_conf_senha" type="password" placeholder="Confirma Senha">
+                    <input id="id_nasc" type="date" placeholder="Data de nascimento">
+                    <select id="estilo">
+                        <option value="0">-- Estilo de música favorita --</option>
+                        <option value="">Alternativo</option>
+                        <option value="">Blues</option>
+                        <option value="">Clássica</option>
+                        <option value="">Country</option>
+                        <option value="">Eletrônica</option>
+                        <option value="">Funk</option>
+                        <option value="">Gospel</option>
+                        <option value="">Hard Rock</option>
+                        <option value="">Heavy Metal</option>
+                        <option value="">Hip Hop/Rap</option>
+                        <option value="">Indie</option>
+                        <option value="">Instrumental</option>
+                        <option value="">J-Pop/J-Rock</option>
+                        <option value="">Jazz</option>
+                        <option value="">K-Pop/K-Rock</option>
+                        <option value="">MPB</option>
+                        <option value="">Pagode</option>
+                        <option value="">Pop Rock</option>
+                        <option value="">Sertanejo</option>
+                        <option value="">Romântico</option>
+                        <option value="">R&B</option>
+                        <option value="">Reaggae</option>
+                        <option value="">Trilha sonora</option>
+                        <option value="">Anime</option>
+                    </select>
+                    <img class="preview-img">
+                    <input class="file-chooser" type="file">
+                <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+    </body>
+</html>
+
+
+<script>
+    const $ = document.querySelector.bind(document);
+const previewImg = $('.preview-img');
+const fileChooser = $('.file-chooser');
+
+fileChooser.onchange = e => {
+    const fileToUpload = e.target.files.item(0);
+    const reader = new FileReader();
+
+    // evento disparado quando o reader terminar de ler 
+    reader.onload = e => previewImg.src = e.target.result;
+
+    // solicita ao reader que leia o arquivo 
+    // transformando-o para DataURL. 
+    // Isso disparará o evento reader.onload.
+    reader.readAsDataURL(fileToUpload);
+};
+</script>

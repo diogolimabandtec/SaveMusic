@@ -1,0 +1,21 @@
+create database SaveMusic;
+use SaveMusic;
+
+create table Usuario(
+	idUsuario int primary key auto-inclement,
+	nomeUsuario varchar (30),
+	email varchar (60),
+	senha varchar (20),
+	dataNascimento date,
+	estiloFavorito varchar (20),
+	imgUsuario blob
+);
+
+create table musicas(
+	fkUsuario int,
+	nomeMusica varchar (30),
+	estiloMusica varchar (20),
+	album varchar (20),
+	genero varchar (20),
+	foreing key (fkUsuario) references Usuario (idUsuario)
+);
