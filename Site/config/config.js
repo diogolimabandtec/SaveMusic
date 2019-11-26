@@ -8,24 +8,12 @@ module.exports = {
     storage: ":memory:"
   },
   production: {
-    username: 'usergrupo1',
-    password: '#Gfgrupo1',
-    database: 'bdgrupo1',
-    host: 'srvgroupum.database.windows.net',
-    dialect: 'mssql',
+    username: 'root',
+    password: 'bandtec',
+    database: 'SaveMusic',
+    host: '0.0.0.0',
+    dialect: 'mysql',
     xuse_env_variable: 'DATABASE_URL',
-    dialectOptions: {
-      options: {
-        encrypt: true
-      }
-    },
-    pool: { 
-      max: 5,
-      min: 1,
-      acquire: 5000,
-      idle: 30000,
-      connectTimeout: 5000
-    }
   }
 };
  

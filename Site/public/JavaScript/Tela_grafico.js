@@ -182,3 +182,4 @@ window.onload = function() {
                atualizarGrafico(); 
             }, 2500);
         };
+      

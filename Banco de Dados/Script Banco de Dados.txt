@@ -2,7 +2,7 @@ create database SaveMusic;
 use SaveMusic;
 
 create table Usuario(
-	idUsuario int primary key auto-inclement,
+	idUsuario int primary key auto_increment,
 	nomeUsuario varchar (30),
 	email varchar (60),
 	senha varchar (20),
@@ -12,10 +12,12 @@ create table Usuario(
 );
 
 create table musicas(
+	idMusica int primary key auto_increment,
 	fkUsuario int,
 	nomeMusica varchar (30),
 	estiloMusica varchar (20),
 	album varchar (20),
 	genero varchar (20),
-	foreing key (fkUsuario) references Usuario (idUsuario)
-);
+	Musica blob,
+	foreign key (fkUsuario) references Usuario (idUsuario)
+)auto_increment=10000;

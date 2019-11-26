@@ -135,7 +135,7 @@ a:focus{
     border-bottom-right-radius: 15px;
 }
 
-.direita button{
+.logar{
     transition: 0.3s;
     border: 3px solid rgb(255, 0, 0);
     font-size: 1.6rem;
@@ -150,9 +150,24 @@ a:focus{
     background:black;
  }
 
- .direita button:hover{
+ .logar:hover{
     transition: 0.3s;
     font-size: 30px;
+ }
+
+ .esqueci{
+     transition: 0.4s;
+     background-color: rgba(240, 248, 255, 0);
+     border: 0ch;
+     font-style: italic;
+     font-weight: bold;
+     color: blue;
+     font-size: 20px;
+ }
+
+ .esqueci:hover{
+     color: green;
+     transition: 0.4s;
  }
 
 
